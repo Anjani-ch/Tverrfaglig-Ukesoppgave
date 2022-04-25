@@ -1,0 +1,2 @@
+# Tverrfaglig_Ukesoppgave
+Tverrfaglig_Ukesoppgave i VG2 Informasjonsteknologi

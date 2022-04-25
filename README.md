@@ -1,3 +1,3 @@
 # Tverrfaglig_Ukesoppgave - Påloggingside
 
-URL: [https://github.com/Anjani-ch/Tverrfaglig_Ukesoppgave](https://github.com/Anjani-ch/Tverrfaglig_Ukesoppgave)
+URL: [anjani.ikt-fag.no](anjani.ikt-fag.no)

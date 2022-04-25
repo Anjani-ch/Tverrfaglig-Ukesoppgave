@@ -1,5 +1,5 @@
 // Require modules
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const hashPassword = async (password, saltRounds) => {
     try {

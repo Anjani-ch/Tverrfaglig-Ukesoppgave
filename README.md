@@ -1,3 +1,3 @@
 # Tverrfaglig_Ukesoppgave - Påloggingside
 
-URL: [anjani.ikt-fag.no](anjani.ikt-fag.no)
+URL: [http://anjani.ikt-fag.no](http://anjani.ikt-fag.no)

@@ -17,19 +17,29 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connect to DB
-(async _ => {
-    try {
-        await connectToDB(process.env.MONGO_URI);
+//(async _ => {
+//    try {
+//        await connectToDB(process.env.MONGO_URI);
+//
+//        initPassport(passport);
+//
+//        // Listen for connection on port
+//        app.listen(PORT, () => console.log(`SERVER STARTED ON PORT: ${PORT}`));
+//    } catch (err) {
+//        console.log(err);
+//    }
+//})();
+
+mongoose.connect(connectionURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(_ => {
+        console.log('CONNECTED TO DB...');
 
         initPassport(passport);
 
         // Listen for connection on port
         app.listen(PORT, () => console.log(`SERVER STARTED ON PORT: ${PORT}`));
-    } catch (err) {
-        console.log('INIT ERROR')
-        console.log(err);
-    }
-})();
+    })
+    .catch(err => console.log(err))
 
 // Set view engine
 app.set('view engine', 'ejs');

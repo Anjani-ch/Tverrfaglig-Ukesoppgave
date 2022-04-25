@@ -1,0 +1,29 @@
+<%- include('./partials/head.ejs') %>
+
+    <main class="container">
+        <h1>Demo login site</h1>
+
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Technologies</h4></li>
+            <li class="collection-item">Node JS (Express)</li>
+            <li class="collection-item">MongoDB</li>
+            <li class="collection-item">Materialize CSS</li>
+        </ul>
+
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Dependencies</h4></li>
+            <li class="collection-item">Express-session</li>
+            <li class="collection-item">Passport JS</li>
+            <li class="collection-item">Bcrypt</li>
+            <li class="collection-item">Connect flash</li>
+            <li class="collection-item">EJS</li>
+        </ul>
+
+        <% if(!user) { %>
+            <a href="/signup" class="waves-effect waves-light btn-large">Get Started</a>
+        <% } else { %>
+            <a href="/secret" class="waves-effect waves-light btn-large">Go to secret</a>
+        <% } %>
+    </main>
+
+<%- include('./partials/footer.ejs') %>

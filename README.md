@@ -75,7 +75,7 @@ npm install
 ```
 npm run dev
 ```
-Det vil startes en local server med nettsiden på [http://localhost:3000](http://localhost:3000)
+Det vil startes en local server med nettsiden på [localhost:3000](http://localhost:3000)
 
 <br />
 

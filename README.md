@@ -2,9 +2,9 @@
 Tverrfaglig_Ukesoppgave i VG2 Informasjonsteknologi
 
 ### Dette prosjektet inneholder 3 brancher
-main       => intro til prosjekt, hoved nettside til oppgaven, dokumentasjon av produksjonsløsning, og prosjektmetodikk
+main => intro til prosjekt, hoved nettside til oppgaven, dokumentasjon av produksjonsløsning, og prosjektmetodikk
 <br />
-docs-site  => dokumentasjon nettside til passport js, dokumentasjon av utviklingsløsning for nettsiden
+docs-site => dokumentasjon nettside til passport js, dokumentasjon av utviklingsløsning for nettsiden
 <br />
 login-site => demo login side med passport js, dokumentasjon av utviklingsløsninger for nettsiden
 

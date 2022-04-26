@@ -1,0 +1,21 @@
+<pre class="terminal code">
+<span class="comment">// Require router</span>
+<span class="keyword">const</span> { <span class="function">Router</span> } = <span class="function">require</span>(<span class="string">'express'</span>);
+
+<span class="comment">// Require controller methods</span>
+<span class="keyword">const</span> {
+    <span class="function">renderSecret</span>
+} = <span class="function">require</span>(<span class="string">'../controllers/viewController.js'</span>);
+
+<span class="comment">// Require auth middleware</span>
+<span class="keyword">const</span> { <span class="function">isLoggedIn</span> } = <span class="function">require</span>(<span class="string">'../middleware/auth.js'</span>);
+
+<span class="comment">// Initialize router</span>
+<span class="keyword">const</span> router = new <span class="function">Router</span>();
+
+<span class="comment">// Render secret view</span>
+router.<span class="function">get</span>(<span class="string">'/secret'</span>, <span class="function">isLoggedIn</span>, (req, res) => <span class="function">renderSecret</span>(req, res));
+
+<span class="comment">// Export router</span>
+module.exports = router;
+</pre>

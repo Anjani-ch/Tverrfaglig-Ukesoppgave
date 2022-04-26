@@ -1,0 +1,39 @@
+<div id="passport-local" class="col s12 l9 doc-section">
+    <div>
+    <h4>Installation</h4>
+
+    <p>This strategy allows username and password authentication. This can be integrated with any application or framework that supports Connect-style middleware, for-example with Express</p>
+
+    <div class="terminal">
+    <p class="text-light">$ npm install passport passport-local</p>
+    </div>
+    </div>
+
+    <div>
+    <h4>Implementation</h4>
+
+    <h5>First we will look at our main server file</h5>
+    <p>Now we will look into how we can implement this strategy. This example will show how to use Passport JS with connect-flash and express-session. Also assumming that we are using MongoDB database.</p>
+
+    <%- include('./passport-local/implementation.ejs') %>
+
+    <br>
+
+    <h5>Now we will look at the configuration for the strategy</h5>
+    <p>This is how passport will authenticate, and handle errors.</p>
+
+    <%- include('./passport-local/configuration.ejs') %>
+
+    <br>
+
+    <h4>Middleware</h4>
+
+    <p>Thanks to passport we can create middleware to protect routes from non-authenticated users. Passport JS provides an isAuthenticated() method on the request object. This methods returns a boolean based on if the user is authenticated.</p>
+    
+    <%- include('./passport-local/middleware-func.ejs') %>
+
+    <p>We can then import that middleware and add it to our route. If the user is authenticated the user will be sent to the protected page, but if the are not authenticated then they will be redirected to the index page.</p>
+
+    <%- include('./passport-local/middleware-route.ejs') %>
+    </div>
+</div>

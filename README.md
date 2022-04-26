@@ -1,7 +1,6 @@
 # Tverrfaglig_Ukesoppgave
 Tverrfaglig_Ukesoppgave i VG2 Informasjonsteknologi
 
-<<<<<<< HEAD
 ### Påloggingsiden er hostet på ett VM testmiljø
 URL: [anjani.ikt-fag.no](http://anjani.ikt-fag.no)
 

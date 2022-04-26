@@ -1,32 +1,7 @@
 <%- include('./partials/head.ejs') %>
-    <nav class="hide-on-large-only">
-        <div id="nav-wrapper">
-            <div class="container">
-                <a href="#" data-target="doc-mobile-nav" class="sidenav-trigger hide-on-large-only">
-                    <i class="material-icons">menu</i>
-                </a>
-    
-                <div class="brand-logo">Docs</div>
-            </div>
-        </div>
-    </nav>
 
-    <ul class="sidenav" id="doc-mobile-nav">
-        <li><a href="#">passport-local</a></li>
-    </ul>
-
-    <main id="docs" class="container row">
-      <h2 class="hide-on-med-and-down">Docs</h2>
-
-      <section class="row">
-          <aside class="col l3 hide-on-med-and-down">
-            <ul id="docs-nav" class="sidenav sidenav-fixed">
-                <li class="bold"><a href="#passport-local" class="waves-effect waves-teal">passport-local</a></li>
-            </ul>
-          </aside>
-    
-          <%- include('./partials/docs/passport-local.ejs') %>
-      </section>
+    <main id="docs" class="container">
+        <%- include('./partials/docs/passport-local.ejs') %>
     </main>
 
 <%- include('./partials/footer.ejs') %>

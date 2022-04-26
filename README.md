@@ -9,7 +9,43 @@ URL: [anjani.ikt-fag.no](http://anjani.ikt-fag.no)
 
 ## Struktur
 ```
-Struktur
+Tverrfaglig_Ukesoppgave
+ |- controllers
+ |  |- viewController.js
+ |- public
+ |  |- css
+ |  |  |- styles.css
+ |  |- img
+ |  |  |- passport-logo.png
+ |  |- js
+ |  |  |- main.js
+ |- routes
+ |  |- routes.js
+ |- views
+ |  |- partials
+ |  |  |- docs
+ |  |  |  |- passport-local
+ |  |  |  |  |- authenticate.ejs
+ |  |  |  |  |- configuration.ejs
+ |  |  |  |  |- implementation.ejs
+ |  |  |  |  |- localStrategy-params.ejs
+ |  |  |  |  |- localStrategy-request.ejs
+ |  |  |  |  |- middleware-func.ejs
+ |  |  |  |  |- middleware-route.ejs
+ |  |  |  |- passport-local.ejs
+ |  |  |- footer.ejs
+ |  |  |- head.ejs
+ |  |  |- navbar.ejs
+ |  |- 404.ejs
+ |  |- docs.ejs
+ |  |- index.ejs
+ |  |- summary.ejs
+ |- .env
+ |- .gitignore
+ |- app.js
+ |- package-lock.json
+ |- package.json
+ |- README.md
 ```
 
 ## Dependencies

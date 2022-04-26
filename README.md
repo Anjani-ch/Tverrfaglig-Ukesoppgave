@@ -19,8 +19,6 @@ Prosjektmetodikk er viktig fordi man har en struktur på det man skal gjøre. Ma
 | anjanilocal | Web Server | 10.12.1.69/24 | anjani.ikt-fag.no |
 
 # Valg av produksjonsløsning
-Windows Server: Enkel oppsett av DHCP og DNS. Jeg har erfaring med det fra før.
-<br />
 Ubuntu Server: Enkel oppsett av web server, og brannmur. Jeg har erfaring med det fra før.
 
 # Valg av utviklingsløsning

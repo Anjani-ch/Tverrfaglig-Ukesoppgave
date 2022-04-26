@@ -9,7 +9,7 @@ URL: [anjani.demo](anjani.demo)
 
 ## Struktur
 ```
-tverrfaglig_ukesoppgave
+Tverrfaglig_Ukesoppgave
  |- config
  |  |- db.js
  |  |- passport.js

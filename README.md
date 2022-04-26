@@ -1,4 +1,3 @@
-# Tverrfaglig_Ukesoppgave - Dokumentasjon av rammeverk
 # Tverrfaglig_Ukesoppgave - Dokumentasjon nettside
 
 ### Dokumentasjon nettsiden er hostet på en VM

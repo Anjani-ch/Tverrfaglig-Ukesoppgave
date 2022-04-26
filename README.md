@@ -3,7 +3,9 @@ Tverrfaglig_Ukesoppgave i VG2 Informasjonsteknologi
 
 ### Dette prosjektet inneholder 3 brancher
 main       => intro til prosjekt, hoved nettside til oppgaven, dokumentasjon av produksjonsløsning, og prosjektmetodikk
+<br />
 docs-site  => dokumentasjon nettside til passport js, dokumentasjon av utviklingsløsning for nettsiden
+<br />
 login-site => demo login side med passport js, dokumentasjon av utviklingsløsninger for nettsiden
 
 <br />
@@ -13,6 +15,7 @@ Prosjektmetodikk er viktig fordi man har en struktur på det man skal gjøre. Ma
 
 # Valg av produksjonsløsning
 Windows Server: Enkel oppsett av DHCP og DNS. Jeg har erfaring med det fra før.
+<br />
 Ubuntu Server: Enkel oppsett av web server, og brannmur. Jeg har erfaring med det fra før.
 
 # Valg av utviklingsløsning

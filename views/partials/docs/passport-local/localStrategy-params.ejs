@@ -1,0 +1,11 @@
+<pre class="terminal code">
+passport.<span class="function">use</span>(new <span class="function">LocalStrategy</span>({
+    usernameField: <span class="string">'email'</span>,
+    passwordField: <span class="string">'passwd'</span>,
+    session: <span class="data-type">false</span>
+  },
+  <span class="data-type">function</span>(username, password, done) {
+    <span class="string">// logic...</span>
+  }
+));
+</pre>

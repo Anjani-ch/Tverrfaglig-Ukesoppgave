@@ -1,10 +1,14 @@
+// Require local strategy
 const LocalStrategy = require('passport-local').Strategy;
 
+// Require controller methods
 const { comparePasswords } = require('../controllers/bcryptController.js');
 
+// Require model
 const User = require('../models/User.js');
 
 const initPassport = passport => {
+    // Handle authnetication
     passport.use(new LocalStrategy({ usernameField: 'email' }, async (email, password, done) => {
         // Get User With Email
         try {
@@ -28,8 +32,10 @@ const initPassport = passport => {
         }
     }));
 
+    // Save user id in session
     passport.serializeUser((user, done) => done(null, user.id));
     
+    // Get use from id stored in session
     passport.deserializeUser(async (id, done) => {
         try {
             const user = await User.findById(id);

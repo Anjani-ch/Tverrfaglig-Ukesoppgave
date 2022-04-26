@@ -1,0 +1,40 @@
+<%- include('./partials/head.ejs') %>
+
+    <main class="container row">
+        <h1>Summary</h1>
+
+        <section>
+            <h4>Easy to use?</h4>
+
+            <p>Passport JS is pretty straigh-forward to use. All the code is pre-written by Passport JS, which means that we as the developer only need to think about the implementation. As stated Passport JS is extremely flexible and moduler. You can choose just how difficult you want your implementation to be. Passport JS proved multiple different strategies, so when you are starting out you can choose a simple strategy, and afterwards move onto more complex strategies. As an added bonus Passport JS also interacts with other 3rd-party-libraries such as express-session, and connect-flash behind the scenes. When passport interacts with these libraries Passport JS handles error-messages and user session for you, which makes it easier for you to implement better user experience.</p>
+        </section>
+
+        <br>
+
+        <section>
+            <h4>Is Passport JS safe?</h4>
+            <h5>Threats and security-risks</h5>
+
+            <p>Passport JS itself is not a secutiry-risk and does not provide any threats. The security comes with your implementation and Passport's implementation with the 3rd-party-libraries. As long as you secure your back-end, and front-end there should be no problems using Passport JS</p>
+
+            <h5>Common threats</h5>
+
+            <ul>
+                <li>Compromised session (exposed session secret, Cross-site Request Forgery Attack)</li>
+                <li>Unhashed/unencrypted passwords</li>
+                <li>No rate limit</li>
+            </ul>
+
+            <h5>Security measures to improve security</h5>
+
+            <ul>
+                <li>Strong session secret</li>
+                <li>Hash/encrypt passwords</li>
+                <li>Secure front-end from Cross-site Request Forgery Attack and Cross-Site-Scripting</li>
+                <li>Add rate limit on server</li>
+                <li>Have Passport JS on an additional proxy server</li>
+            </ul>
+        </section>
+    </main>
+
+<%- include('./partials/footer.ejs') %>

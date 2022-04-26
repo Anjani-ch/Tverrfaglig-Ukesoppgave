@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.form {
+    max-width: 700px;
+    padding: 15px 30px;
+    margin: 40px auto 0px auto;
+}
+
+.form button {
+    width: 100%;
+}
+
+.input-field {
+    margin-top: 40px;
+}
+
+.alert .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert .card-content span:not(.material-icons) {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right:4px;
+}
+
+.alert .card-content .material-icons {
+    font-size: 1.5em;
+    position: relative;
+    top: 5px;
+    margin-right: 0.5em;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#index-logo {
+    width: 350px;
+}
+
+.card-panel .material-icons {
+    font-size: 50px;
+}
+
+.card-panel p {
+    font-weight: bold;
+}
+
+#docs-nav {
+    position: static;
+    width: 100%;
+    padding: 8px 0px;
+}
+
+.doc-section div {
+    margin-bottom: 40px;
+}
+
+.terminal {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+}
+
+.terminal.code {
+    padding: 15px 20px;
+}
+
+.keyword {
+    color: rgb(218, 101, 218);
+}
+
+.function {
+    color: gold;
+}
+
+.data-type {
+    color: rgb(99, 99, 252);
+}
+
+.string {
+    color: rgb(54, 179, 54);
+}
+
+.comment {
+    color: rgb(44, 168, 44);
+}
+
+pre {
+    overflow-x: scroll;
+}

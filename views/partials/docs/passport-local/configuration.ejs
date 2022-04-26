@@ -1,0 +1,53 @@
+<pre class="terminal code">
+<span class="comment">// Require local strategy</span>
+<span class="keyword">const</span> LocalStrategy = <span class="function">require</span>(<span class="string">'passport-local'</span>).Strategy;
+
+<span class="comment">// Require controller methods</span>
+<span class="keyword">const</span> { comparePasswords } = <span class="function">require</span>(<span class="string">'../controllers/bcryptController.js'</span>);
+
+<span class="comment">// Require model</span>
+<span class="keyword">const</span> User = <span class="function">require</span>(<span class="string">'../models/User.js'</span>);
+
+<span class="keyword">const</span> <span class="function">initPassport</span> = passport <span class="data-type">=></span> {
+    <span class="comment">// Handle authnetication</span>
+    passport.<span class="function">use</span>(<span class="keyword">new</span> <span class="function">LocalStrategy</span>({ usernameField: <span class="string">'email'</span> }, <span class="keyword">async</span> (email, password, done) => {
+        <span class="comment">// Get User With Email</span>
+        <span class="keyword">try</span> {
+        <span class="keyword">const</span> user = await User.<span class="function">findOne</span>({ email });
+            
+            <span class="keyword">if</span>(user) {
+                <span class="comment">// Match Passwords</span>
+                <span class="keyword">const</span> isMatch = <span class="keyword">await</span> <span class="function">comparePasswords</span>(password, user.password);
+
+                <span class="keyword">let</span> result;
+
+                <span class="keyword">if</span> (isMatch) result = <span class="function">done</span>(<span class="keyword">null</span>, user);
+                <span class="keyword">else</span> result = <span class="function">done</span>(<span class="keyword">null</span>, <span class="keyword">false</span>, { message: <span class="string">'Incorrect password'</span> });
+
+                <span class="keyword">return</span> result;
+            } <span class="keyword">else</span> {
+                <span class="keyword">return</span> <span class="function">done</span>(<span class="data-type">null</span>, <span calss="data-type">false</span>, { message: <span calss="string">'No user with these credentials'</span> });
+            }
+        } <span class="keyword">catch</span> (err) {
+            console.<span class="function">log</span>(err);
+        }
+    }));
+
+<span class="comment">// Save user id in session</span>
+passport.<span class="function">serializeUser</span>((user, done) <span class="data-type">=></span> done(<span class="data-type">null</span>, user.id));
+    
+<span class="comment">// Get user from id stored in session</span>
+passport.<span class="function">deserializeUser</span>(<span class="keyword">async</span> (id, done) => {
+        <span class="keyword">try</span> {
+            <span class="keyword">const</span> user = await User.<span class="function">findById</span>(id);
+
+            <span class="function">done</span>(<span class="data-type">null</span>, user);
+        } <span class="keyword">catch</span> (err) {
+            console.<span class="function">log</span>(err);
+            <span class="function">done</span>(err, <span class="data-type">null</span>);
+        }
+    });
+}
+
+module.exports = <span class="function">initPassport</span>;
+</pre>

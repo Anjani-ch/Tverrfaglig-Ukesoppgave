@@ -1,0 +1,7 @@
+<pre class="terminal code">
+app.<span class="function">post</span>(<span class="string">'/login'</span>, 
+  passport.<span class="function">authenticate</span>(<span class="string">'local'</span>, { failureRedirect: <span class="string">'/login'</span> }),
+  <span class="data-type">function</span>(req, res) {
+    res.<span class="function">redirect</span>(<span class="string">'/'</span>);
+});
+</pre>

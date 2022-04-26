@@ -1,0 +1,12 @@
+<pre class="terminal code">
+<span class="keyword">const</span> <span class="function">isLoggedIn</span> = (req, res, next) <span class="data-type">=></span> {
+    <span class="keyword">if</span> (req.<span class="function">isAuthenticated</span>()) {
+        <span class="function">next</span>();
+    } <span class="keyword">else</span> {
+        req.<span class="function">flash</span>(<span class="string">'errorMsg'</span>, <span class="string">'Log in to access this resource'</span>);
+        res.<span class="function">redirect</span>(<span class="string">'/login'</span>);
+    }
+};
+
+module.exports = { <span class="function">isLoggedIn</span> };
+</pre>

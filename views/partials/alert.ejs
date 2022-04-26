@@ -1,0 +1,45 @@
+<% if(typeof errors != 'undefined') { %>
+    <% errors.forEach(error => { %>
+        <div class="alert card red white-text">
+            <div class="card-content">
+                <p><i class="material-icons prefix">report</i><span>Error:</span> <%= error %></p>
+				<span class="material-icons close-alert pointer">
+				close
+			</span>
+            </div>
+        </div>
+    <% }); %>
+<% } %>
+
+<% if(successMsg != '') { %>
+    <div class="alert card green white-text">
+		<div class="card-content">
+			<p><i class="material-icons prefix">check_circle</i><span>Success:</span> <%= successMsg %>.</p>
+			<span class="material-icons close-alert pointer">
+				close
+			</span>
+		</div>
+	</div>
+<% } %>
+
+<% if(errorMsg != '') { %>
+    <div class="alert card red white-text">
+		<div class="card-content">
+			<p><i class="material-icons prefix">report</i><span>Error:</span> <%= errorMsg %></p>
+			<span class="material-icons close-alert pointer">
+				close
+			</span>
+		</div>
+	</div>
+<% } %>
+
+<% if(error != '') { %>
+    <div class="alert card red white-text">
+		<div class="card-content">
+			<p><i class="material-icons prefix">report</i><span>Error:</span> <%= error %></p>
+			<span class="material-icons close-alert pointer">
+				close
+			</span>
+		</div>
+	</div>
+<% } %>

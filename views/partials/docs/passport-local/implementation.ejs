@@ -1,0 +1,73 @@
+<pre class="terminal code">
+<span class="keyword">const</span> express = <span class="function">require</span>(<span class="string">'express'</span>);
+<span class="keyword">const</span> session = <span class="function">require</span>(<span class="string">'express-session'</span>);
+<span class="keyword">const</span> passport = <span class="function">require</span>(<span class="string">'passport'</span>);
+<span class="keyword">const</span> flash = <span class="function">require</span>(<span class="string">'connect-flash'</span>);
+<span class="keyword">const</span> dotenv = <span class="function">require</span>(<span class="string">'dotenv'</span>);
+<span class="keyword">const</span> path = <span class="function">require</span>(<span class="string">'path'</span>);
+    
+<span class="keyword">const</span> initPassport = <span class="function">require</span>(<span class="string">'./config/passport.js'</span>);
+<span class="keyword">const</span> connectToDB = <span class="function">require</span>(<span class="string">'./config/db.js'</span>);
+    
+<span class="keyword">const</span> PORT = process.env.<span class="data-type">PORT</span> || <span class="data-type">3000</span>;
+    
+<span class="comment">// Init Express App</span>
+<span class="keyword">const</span> app = <span class="function">express</span>();
+    
+<span class="comment">// .env config</span>
+dotenv.<span class="function">config</span>();
+    
+<span class="comment">// Passport Config</span>
+<span class="function">initPassport</span>(passport);
+    
+<span class="comment">// Connect To DB</span>
+(<span class="keyword">async</span> _ <span class="data-type">=></span> {
+    <span class="keyword">try</span> {
+        <span class="keyword">await</span> <span class="function">connectToDB</span>(process.env.MONGO_URI);
+        console.<span class="function">log</span>(<span class="string">'Connected to DB...'</span>);
+        
+        app.<span class="function">listen</span>(PORT, _ <span class="data-type">=></span> {
+            console.<span class="function">log</span>(<span class="string">`Server running on port ${PORT}`</span>);
+        });
+    } <span class="keyword">catch</span> (err) {
+        console.<span class="function">log</span>(err);
+    }
+})();
+    
+<span class="comment">// Set Public Folder</span>
+app.<span class="function">use</span>(express.<span class="function">static</span>(path.<span class="function">join</span>(__dirname, <span class="string">'/public'))</span>);
+    
+<span class="comment">// Bodyparser</span>
+app.<span class="function">use</span>(express.<span class="function">urlencoded</span>({ extended: <span class="data-type">true</span> }));
+app.<span class="function">use</span>(express.<span class="function">json</span>());
+    
+<span class="comment">// Express Session</span>
+app.<span class="function">use</span>(<span class="function">session</span>({
+    secret: process.env.<span class="data-type">SESSION_SECRET</span>,
+    resave: <span class="data-type">true</span>,
+    saveUninitialized: <span class="data-type">true</span>
+}));
+    
+<span class="comment">// Passport </span>
+app.<span class="function">use</span>(passport.<span class="function">initialize</span>());
+app.<span class="function">use</span>(passport.<span class="function">session</span>());
+    
+<span class="comment">// Connect Flash</span>
+app.<span class="function">use</span>(<span class="function">flash</span>());
+    
+<span class="comment">// Global Variables</span>
+app.<span class="function">use</span>((req, res, next) <span class="data-type">=></span> {
+    <span class="comment">// Flash Messages</span>
+    res.locals.successMsg = req.<span class="function">flash</span>(<span class="string">'successMsg'</span>);
+    res.locals.errorMsg = req.<span class="function">flash</span>(<span class="string">'errorMsg'</span>);
+    res.locals.error = req.<span class="function">flash</span>(<span class="string">'error'</span>);
+    
+    <span class="comment">// User</span>
+    res.locals.user = req.user;
+        
+    <span class="function">next</span>();
+});
+    
+<span class="comment">// Routes</span>
+app.<span class="function">use</span>(<span class="string">'/'</span>, require(<span class="string">'./routes/routes.js'</span>));
+</pre>

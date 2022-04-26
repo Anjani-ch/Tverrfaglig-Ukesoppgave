@@ -1,6 +1,6 @@
 # Tverrfaglig_Ukesoppgave - Påloggingside
 
-### Påloggingsiden er hostet på ett vm testmiljø
+### Påloggingsiden er hostet på ett VM testmiljø
 URL: [anjani.demo](anjani.demo)
 
 <br />

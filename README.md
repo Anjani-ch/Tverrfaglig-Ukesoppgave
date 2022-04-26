@@ -1,6 +1,9 @@
 # Tverrfaglig_Ukesoppgave
 Tverrfaglig_Ukesoppgave i VG2 Informasjonsteknologi
 
+### Dokumentasjon nettsiden er hostet på en VM
+URL: [anjani.ikt-fag.no](http://anjani.ikt-fag.no)
+
 ### Dette prosjektet inneholder 3 brancher
 main => intro til prosjekt, hoved nettside til oppgaven, dokumentasjon av produksjonsløsning, og prosjektmetodikk
 <br />

@@ -1,7 +1,7 @@
 # Tverrfaglig_Ukesoppgave - Påloggingside
 
-### Påloggingsiden er hostet på ett vm testmiljø
-URL: [anjani.demo](anjani.demo)
+### Påloggingsiden er hostet på ett VM testmiljø
+URL: [anjani.demo](http://anjani.demo)
 
 <br />
 
@@ -62,10 +62,11 @@ Tverrfaglig_Ukesoppgave
 <br />
 
 ## Installasjon
-Naviger til prosjekt mappen, og installer nødvendige dependencies
+Du må klone prosjektet, naviger til mappen, og installer nødvendige dependencies
 
 ```
-cd tverrfaglig_ukesoppgave
+git clone -b login-site https://github.com/Anjani-ch/Tverrfaglig_Ukesoppgave.git
+cd Tverrfaglig_Ukesoppgave
 npm install
 ```
 

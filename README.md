@@ -1,7 +1,6 @@
 # Tverrfaglig_Ukesoppgave
 Tverrfaglig_Ukesoppgave i VG2 Informasjonsteknologi
 
-<<<<<<< HEAD
 ### Påloggingsiden er hostet på ett VM testmiljø
 URL: [anjani.ikt-fag.no](http://anjani.ikt-fag.no)
 
@@ -77,13 +76,6 @@ Tverrfaglig_Ukesoppgave
     <li>passport-local</li>
 </ul>
 
-=======
-### Dokumentasjon nettsiden er hostet på en VM
-URL: [anjani.ikt-fag.no](http://anjani.ikt-fag.no)
-
-### Dette prosjektet inneholder 3 brancher
-main => intro til prosjekt, hoved nettside til oppgaven, dokumentasjon av produksjonsløsning, og prosjektmetodikk
->>>>>>> 73a3642a9d06a0f4b660a4ce49a3c6c616e559f2
 <br />
 
 ## Installasjon

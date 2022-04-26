@@ -62,10 +62,11 @@ tverrfaglig_ukesoppgave
 <br />
 
 ## Installasjon
-Naviger til prosjekt mappen, og installer nødvendige dependencies
+Du må klone prosjektet, naviger til mappen, og installer nødvendige dependencies
 
 ```
-cd tverrfaglig_ukesoppgave
+git clone -b login-site https://github.com/Anjani-ch/Tverrfaglig_Ukesoppgave.git
+cd Tverrfaglig_Ukesoppgave
 npm install
 ```
 

@@ -23,7 +23,7 @@ dotenv.<span class="function">config</span>();
 <span class="comment">// Connect To DB</span>
 (<span class="keyword">async</span> _ <span class="data-type">=></span> {
     <span class="keyword">try</span> {
-        <span class="keyword">await</span> <span class="function">connectToDB</span>(process.env.MONGO_URI);
+        <span class="keyword">await</span> <span class="function">connectToDB</span>(process.env.<span class="data-type">MONGO_URI</span>);
         console.<span class="function">log</span>(<span class="string">'Connected to DB...'</span>);
         
         app.<span class="function">listen</span>(PORT, _ <span class="data-type">=></span> {

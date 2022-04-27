@@ -29,10 +29,21 @@
     <p>The verify callback can be supplied with the request object by setting the passReqToCallback option to true, and it will autmatically change the callback arguments order.</p>
 
     <%- include('./passport-local/localStrategy-request.ejs') %>
+
+    <p>If you dont't want to use session that Passport JS provides, then you can safely disable it by setting session to fake.</p>
+
+    <p>The verify callback can be supplied with the request object by setting the passReqToCallback option to true, and it will autmatically change the callback arguments order.</p>
+
+    <%- include('./passport-local/localStrategy-request.ejs') %>
     
     <br>
 
-    <h5>Now we will look at the configuration for the strategy</h5>
+    <h4>done()</h4>
+    <p>The done() function is called after the validation is complete. It is provided by Passport JS and takes in three arguments. It takes in error, user, and options. If you call done with the user then Passport JS will make the user available on the req object by accessing req.user. Options could for example be a message an error message that will be saved as error if you have implemented session.</p>
+
+    <br>
+
+    <h5>Now we will look at a configuration for the strategy</h5>
     <p>This is how passport will authenticate, and handle errors.</p>
 
     <%- include('./passport-local/configuration.ejs') %>

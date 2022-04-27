@@ -39,7 +39,7 @@ passport.<span class="function">serializeUser</span>((user, done) <span class="d
 <span class="comment">// Get user from id stored in session</span>
 passport.<span class="function">deserializeUser</span>(<span class="keyword">async</span> (id, done) => {
         <span class="keyword">try</span> {
-            <span class="keyword">const</span> user = await User.<span class="function">findById</span>(id);
+            <span class="keyword">const</span> user = <span class="keyword">await</span> User.<span class="function">findById</span>(id);
 
             <span class="function">done</span>(<span class="data-type">null</span>, user);
         } <span class="keyword">catch</span> (err) {

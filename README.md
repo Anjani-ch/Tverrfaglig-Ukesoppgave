@@ -95,11 +95,24 @@ npm run dev
 ```
 Det vil startes en local server med nettsiden på [localhost:3000](http://localhost:3000)
 
+### Environment variables
+Create .env with following values:<br />
+```
+MONGO_URI="<your-mongo-uri>"
+```
+
 <br />
 
 ## Produksjon
 ```
 npm run start
+```
+
+### Environment variables
+Create .env with following values:<br />
+```
+PORT="<port-number>"
+MONGO_URI="<your-mongo-uri>"
 ```
 
 # Produksjonsløsning

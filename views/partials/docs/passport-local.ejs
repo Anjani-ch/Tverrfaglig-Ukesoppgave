@@ -43,7 +43,17 @@
 
     <br>
 
-    <h5>Now we will look at a configuration for the strategy</h5>
+    <h4>passport.serializeUser()</h4>
+    <p>The serializeUser() function takes in a user and a done() function. Here you save the user or some user data in session so that you can access the user later on the req object.</p>
+
+    <br>
+
+    <h4>passport.deserializeUser()</h4>
+    <p>The deserializeUser() function takes the data we stored in session and a done() function. Here you can use the data stored in session and call done() with the user that you got. If you have an error you can handle that error in the done() function aswell. </p>
+
+    <br>
+
+    <h5>Now we will look at a configuration for the strategy. </h5>
     <p>This is how passport will authenticate, and handle errors.</p>
 
     <%- include('./passport-local/configuration.ejs') %>

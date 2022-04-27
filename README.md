@@ -43,6 +43,7 @@ Tverrfaglig_Ukesoppgave
  |  |  | |  |- middleware-func.ejs
  |  |  | |  |- middleware-route.ejs
  |  |  | |- passport-local.ejs
+ |  |  | |- password-hashing.ejs
  |  |  |- alert.ejs
  |  |  |- footer.ejs
  |  |  |- head.ejs
